@@ -2,6 +2,7 @@ export const fetchData = async (url) => {
     const response = await fetch(url, {
         method: 'GET',
         credentials: 'include',
+        headers: { 'Content-Type': 'application/json', 'ngrok-skip-browser-warning': '69420' }
     });
 
     if (!response.ok) {
@@ -15,7 +16,7 @@ export const fetchData = async (url) => {
 
 export const GetBlocksAPI = async (user_idx, idx) => {
     try {
-        const res = await fetch(`/api/getUserId/${user_idx}`, { method: 'GET', credentials: 'include' });
+        const res = await fetch(`/api/getUserId/${user_idx}`, { method: 'GET', credentials: 'include', headers: { 'Content-Type': 'application/json', 'ngrok-skip-browser-warning': '69420' } });
         const data = await res.json();
         if (!res.ok) throw new Error(data);
         const userID = data[0].userID;
