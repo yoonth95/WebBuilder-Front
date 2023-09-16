@@ -7,7 +7,6 @@ export const verifyTokenAPI = async () => {
     });
 
     const text = await res.text();
-    console.log('Response text:', text);
 
     if (!res.ok) {
       throw new Error('No token');

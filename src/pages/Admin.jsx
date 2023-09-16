@@ -7,7 +7,6 @@ import Pagement from 'components/Pagement/Pagement';
 const Admin = ({ setIsOpen, isLoading, setIsLoading }) => {
   const query = new URLSearchParams(useLocation().search);
   const tab = query.get('tab');
-  console.log('d');
   return (
     <div className='admin'>
       {tab === 'a' ? <Management setIsOpen={setIsOpen} setIsLoading={setIsLoading} isLoading={isLoading} /> : <Pagement setIsOpen={setIsOpen} setIsLoading={setIsLoading} isLoading={isLoading} />}
