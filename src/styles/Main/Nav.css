@@ -150,7 +150,7 @@
 
 .gnb_info_wrap.on {
   justify-content: center;
-  max-width: 1920px;
+  /* max-width: 1920px; */
   margin: 0 auto;
   display: flex;
   width: 100%;
@@ -211,7 +211,7 @@
 .back {
   position: absolute;
   top: 0;
-  width: 360px;
+  width: 25%;
   background-color: white;
   height: 100%;
   right: 0;
