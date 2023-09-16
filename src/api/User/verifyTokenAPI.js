@@ -2,6 +2,7 @@ export const verifyTokenAPI = async () => {
   try {
     const res = await fetch('/api/verifyToken', {
       method: 'GET',
+      headers: { 'Content-Type': 'application/json', 'ngrok-skip-browser-warning': '69420' },
       credentials: 'include',
     });
 
