@@ -23,3 +23,5 @@ yarn-error.log*
 # history
 /.history
 node_modules/
+
+.env
