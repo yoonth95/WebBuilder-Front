@@ -20,7 +20,8 @@ export const verifyTokenAPI = async () => {
 
     return userInfo;
   } catch (err) {
-    console.error(err);
+    console.error('Error message:', err.message);
+    console.error('Error stack:', err.stack);
     throw err;
   }
 };
