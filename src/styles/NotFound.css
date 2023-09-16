@@ -1,0 +1,26 @@
+.not_found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.not_found_main {
+  width: 400px;
+  text-align: center;
+}
+
+.not_found_text{
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.not_found_btn{
+  width: 100%;
+  border-radius: 10px;
+  background-color: #EE7D00;
+  color: #f0f0f0;
+  height: 57px;
+  font-weight: 700;
+}
+

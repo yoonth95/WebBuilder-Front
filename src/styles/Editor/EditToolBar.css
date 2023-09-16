@@ -1,0 +1,39 @@
+.options {
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	width: fit-content;
+	border: 1px solid black;
+	background-color: #fff;
+	z-index: 10;
+	height: 30px;
+	width: 265px;
+}
+
+.option_btn,
+.color_box {
+	height: 28px;
+	width: 28px;
+	display: grid;
+	place-items: center;
+	border-radius: 3px;
+	border: none;
+	background-color: #ffffff;
+	outline: none;
+	color: #020929;
+	cursor: pointer;
+}
+
+.option_btn:hover {
+	background-color: aliceblue;
+}
+
+.textField {
+	border: 1px solid #020929;
+	height: 200px;
+	padding: 10px;
+	margin-top: 50px;
+}

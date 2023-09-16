@@ -1,0 +1,10 @@
+.subMenus.addSubMenu {
+  justify-content: center;
+  border: 0.5px dashed #b3b3b3;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.subMenus.addSubMenu svg {
+  font-size: 30px;
+  color: #b3b3b3;
+}

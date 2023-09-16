@@ -1,0 +1,183 @@
+.main_wrap {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-slider {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel_btn {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 312px;
+  left: 239px;
+  width: 150px;
+  padding: 8px;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #f3f3f3;
+}
+
+.carousel_btn button {
+  font-size: 1rem;
+  color: #f3f3f3;
+}
+
+.btn_flooting {
+  position: fixed;
+  display: flex;
+  z-index: 40;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1200px;
+  height: 70px;
+}
+
+.flooting {
+  position: relative;
+  flex: 1;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0px -5px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.trialSection {
+  background-color: #ee7d00;
+}
+
+.consultationSection {
+  background-color: #f8a344;
+}
+
+.flootText {
+  position: absolute;
+  top: 7px;
+  font-size: 38px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.trialText {
+  right: 300px;
+}
+
+.consultationText {
+  left: 300px;
+}
+
+.flootImg {
+  position: absolute;
+  top: -64px;
+  height: 135px;
+  transition: transform 0.8s ease;
+}
+
+.trialImage {
+  right: 106px;
+  width: 138px;
+}
+
+.consultationImage {
+  position: absolute;
+  top: -64px;
+  left: 78px;
+  width: 203px;
+  height: 134px;
+}
+
+.flooting:hover .flootImg {
+  transform: scale(1.1);
+}
+
+@media (min-width: 1747px) {
+  .carousel_btn {
+    top: 480px;
+    left: 361px;
+  }
+}
+
+@media (min-width: 1537px) and (max-width: 1746px) {
+  .carousel_btn {
+    top: 435px;
+    left: 325px;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1536px) {
+  .carousel_btn {
+    top: 381px;
+    left: 285px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .main_wrap {
+    max-width: 640px;
+    min-height: 100%;
+    padding: 0 0 60px;
+    overflow: hidden;
+  }
+  .gnb_wrap {
+    display: none;
+  }
+  .btn_flooting {
+    min-width: 0;
+  }
+  .carousel_btn {
+    top: 859px;
+    left: 467px;
+  }
+  .trialImage {
+    right: 17px;
+    width: 64px;
+  }
+  .flootImg {
+    top: -3px;
+    height: 100%;
+  }
+  .consultationImage {
+    left: 10px;
+    width: 81px;
+  }
+  .flootText {
+    top: 13px;
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+  .trialText {
+    right: 98px;
+  }
+  .consultationText {
+    left: 100px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .carousel_btn {
+    position: absolute;
+    bottom: 4.6875vw !important;
+    right: 6.25vw;
+    left: auto;
+    top: auto;
+    width: 105px;
+  }
+}

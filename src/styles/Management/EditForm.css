@@ -1,0 +1,52 @@
+.edit_wrap {
+  border-radius: 0px 0px 10px 10px;
+  border: 0.5px solid #b3b3b3;
+  border-width: 0 0.5px 0.5px 0.5px;
+  background: #fff;
+  height: 155px;
+  padding: 20px 22px 50px 22px;
+}
+
+.edit_wrap input[type='text'] {
+  width: 92%;
+  height: 48px;
+  padding: 15.5px 10px;
+  border-radius: 10px;
+}
+
+.edit_wrap_sub {
+  display: flex;
+  align-items: center;
+}
+
+.link_label {
+  width: 70%;
+}
+
+.link_label select {
+  width: 80%;
+}
+
+.save_btn {
+  border-radius: 7px;
+  border: 1px solid #ee7d00;
+  background: #ffebd6;
+  color: #ee7d00;
+  text-align: center;
+  padding: 4px 15px;
+}
+
+.new_window_chkBox {
+  width: 25px;
+  height: 25px;
+  margin: 0 1% 0 4%;
+}
+
+.subMenus_wrap .txt_new_window {
+  font-size: 13px;
+  margin-right: 20px;
+}
+
+.txt_new_window {
+  margin-right: 35px;
+}

@@ -1,0 +1,140 @@
+.module_container_line_detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 200px; */
+  height: 100%;
+}
+
+.module_rectangle_detail > img,
+.module_square_detail > img,
+.module_circle_detail > img,
+.module_wideRectangle_detail > img {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.module_square_detail {
+  width: 300px;
+  height: 300px;
+}
+
+.module_rectangle_detail {
+  width: 350px;
+  height: 200px;
+}
+
+.module_rectangle_detail imageTag {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.module_wideRectangle_detail {
+  width: 500px;
+  height: 200px;
+}
+
+.moudule_layout_item {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  min-height: 200px;
+  gap: 10px;
+  zoom: 0.9;
+}
+
+.module_circle_detail {
+  width: 205px;
+  height: 205px;
+}
+
+.module_circle_detail > img {
+  border-radius: 50%;
+}
+
+.module_square::before {
+  content: '';
+  display: none;
+  padding-top: none;
+}
+
+.normal_wrap {
+  height: 100%;
+}
+
+.module_container {
+  justify-content: center !important;
+}
+
+.module_container .module_item {
+  width: 100%;
+}
+
+.module_imageBox {
+  height: 100%;
+}
+
+.module_imageBox > img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .detail_wrap {
+    max-width: 640px;
+    min-height: 100%;
+    padding: 0 0 60px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .textWidth {
+    zoom: 0.8;
+  }
+  table {
+    padding: 0px !important;
+  }
+  .module_rectangle {
+    width: 100%;
+  }
+
+  .module_wideRectangle {
+    width: 100%;
+  }
+  .module_container_line_detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100px; */
+    height: 100%;
+  }
+  .block_container > img {
+    width: 100%;
+  }
+  .module_imageBox > img {
+    width: 100%;
+  }
+  .module_imageBox {
+    text-align: center;
+  }
+  .module_layout_item {
+    flex-wrap: wrap;
+    zoom: 0.7;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .module_layout_item {
+    flex-wrap: wrap;
+    zoom: 0.5;
+  }
+  .textWidth {
+    zoom: 0.4;
+  }
+}

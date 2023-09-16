@@ -1,0 +1,837 @@
+[
+  {
+    "idx": 1,
+    "type": "image",
+    "text": "이미지",
+    "boxes": [
+      {
+        "id": "1",
+        "images": [{ "src": "", "href": "", "shape": "rectangle" }],
+        "layout": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
+          "gap": "10px",
+          "fontSize": "50px"
+        }
+      },
+      {
+        "id": "2",
+        "images": [
+          { "src": "", "href": "", "shape": "rectangle" },
+          { "src": "", "href": "", "shape": "rectangle" }
+        ],
+        "layout": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
+          "gap": "10px",
+          "fontSize": "50px"
+        }
+      },
+      {
+        "id": "3",
+        "images": [
+          { "src": "", "href": "", "shape": "rectangle" },
+          { "src": "", "href": "", "shape": "rectangle" },
+          { "src": "", "href": "", "shape": "rectangle" }
+        ],
+        "layout": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
+          "gap": "10px",
+          "fontSize": "50px"
+        }
+      },
+      {
+        "id": "4",
+        "images": [
+          { "src": "", "href": "", "shape": "rectangle" },
+          { "src": "", "href": "", "shape": "rectangle" },
+          { "src": "", "href": "", "shape": "rectangle" },
+          { "src": "", "href": "", "shape": "rectangle" }
+        ],
+        "layout": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
+          "gap": "10px",
+          "fontSize": "50px"
+        }
+      },
+      {
+        "id": "5",
+        "images": [
+          { "src": "", "href": "", "shape": "circle" },
+          { "src": "", "href": "", "shape": "circle" },
+          { "src": "", "href": "", "shape": "circle" },
+          { "src": "", "href": "", "shape": "circle" }
+        ],
+        "layout": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
+          "gap": "10px",
+          "fontSize": "35px"
+        }
+      },
+      {
+        "id": "6",
+        "images": [
+          { "src": "", "href": "", "shape": "circle" },
+          { "src": "", "href": "", "shape": "circle" },
+          { "src": "", "href": "", "shape": "circle" },
+          { "src": "", "href": "", "shape": "circle" },
+          { "src": "", "href": "", "shape": "circle" }
+        ],
+        "layout": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
+          "gap": "10px",
+          "fontSize": "25px"
+        }
+      },
+      {
+        "id": "7",
+        "images": [
+          { "src": "", "href": "", "shape": "rectangle" },
+          { "src": "", "href": "", "shape": "rectangle" },
+          { "src": "", "href": "", "shape": "circle" },
+          { "src": "", "href": "", "shape": "circle" }
+        ],
+        "layout": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
+          "gap": "10px",
+          "fontSize": "50px"
+        }
+      }
+    ]
+  },
+  {
+    "idx": 2,
+    "type": "line",
+    "text": "구분선",
+    "boxes": [
+      {
+        "id": "1",
+        "style": {
+          "borderTop": "1px solid #B3B3B3",
+          "width": "100%",
+          "height": "auto",
+          "transform": "rotate(0deg)"
+        }
+      },
+      {
+        "id": "2",
+        "style": {
+          "borderTop": "1px dashed #B3B3B3",
+          "width": "100%",
+          "height": "auto",
+          "transform": "rotate(0deg)"
+        }
+      },
+      {
+        "id": "3",
+        "style": {
+          "borderTop": "2px solid #B3B3B3",
+          "width": "100%",
+          "height": "auto",
+          "transform": "rotate(0deg)"
+        }
+      },
+      {
+        "id": "4",
+        "style": {
+          "borderTop": "2px dashed #B3B3B3",
+          "width": "100%",
+          "height": "auto",
+          "transform": "rotate(0deg)"
+        }
+      },
+      {
+        "id": "5",
+        "style": {
+          "borderTop": "3px solid #B3B3B3",
+          "width": "100%",
+          "height": "auto",
+          "transform": "rotate(0deg)"
+        }
+      },
+      {
+        "id": "6",
+        "style": {
+          "borderTop": "3px dashed #B3B3B3",
+          "width": "100%",
+          "height": "auto",
+          "transform": "rotate(0deg)"
+        }
+      },
+      {
+        "id": "7",
+        "style": {
+          "borderTop": "1px solid #B3B3B3",
+          "width": "25%",
+          "height": "auto",
+          "transform": "rotate(0deg)"
+        }
+      },
+      {
+        "id": "8",
+        "style": {
+          "backgroundImage": "radial-gradient(circle, rgb(179, 179, 179) 15%, transparent 0%)",
+          "backgroundSize": "25px 100%",
+          "width": "100%",
+          "height": "3px",
+          "transform": "rotate(0deg)"
+        }
+      },
+      {
+        "id": "9",
+        "style": {
+          "borderTop": "1px solid #B3B3B3",
+          "width": "25%",
+          "height": "auto",
+          "transform": "rotate(135deg)"
+        }
+      },
+      {
+        "id": "10",
+        "style": {
+          "borderTop": "1px solid #B3B3B3",
+          "width": "20%",
+          "height": "auto",
+          "transform": "rotate(90deg)"
+        }
+      }
+    ]
+  },
+  {
+    "idx": 3,
+    "type": "list",
+    "text": "목록",
+    "style": {
+      "paddingTop": "0px",
+      "paddingBottom": "0px"
+    },
+    "boxes": [
+      {
+        "id": "1",
+        "shape": "circle",
+        "style": { "borderRadius": "50%" },
+        "images": [{ "src": "", "href": "" }],
+        "hasText": true,
+        "lines": [
+          {
+            "margin": "15px",
+            "fontSize": "20px",
+            "fontWeight": "400",
+            "color": "#333",
+            "textAlign": "center",
+            "text": "초단기한글"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "shape": "rectangle",
+        "images": [{ "src": "", "href": "" }],
+        "hasTitle": true,
+        "hasDetails": true,
+        "lines": [
+          {
+            "margin": "12px auto",
+            "fontSize": "20px",
+            "color": "#333",
+            "textAlign": "center",
+            "text": "제목"
+          },
+          {
+            "fontFamily": "Noto Sans",
+            "fontSize": "15px",
+            "fontWeight": "350",
+            "color": "#666",
+            "textAlign": "center",
+            "text": "친구들과 함께 모여 교과 과정에 필요한 핵심 과목을 <br />집중적으로 관리 받습니다. 전문 선생님의 학습 관리로 자기주도 <br />학습을 성장시킬 수 있습니다."
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "shape": "square",
+        "images": [{ "src": "", "href": "" }],
+        "hasTitleColor": true,
+        "hasSubtitle": true,
+        "hasTinyText": true,
+        "lines": [
+          {
+            "margin": "10px auto",
+            "color": "#ee7d00",
+            "fontFamily": "Noto Sans",
+            "fontSize": "20px",
+            "fontWeight": "350",
+            "textAlign": "center",
+            "text": "색깔 있는 제목"
+          },
+          {
+            "margin": "2px auto 12px",
+            "fontSize": "15px",
+            "fontFamily": "Noto Sans",
+            "textAlign": "center",
+            "text": "주 1회 / 과목당 10분"
+          },
+          {
+            "fontFamily": "Noto Sans",
+            "fontSize": "15px",
+            "fontWeight": "350",
+            "color": "#666",
+            "textAlign": "center",
+            "text": "학습관리 및 상담"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "shape": "wideRectangle",
+        "images": [{ "src": "", "href": "" }],
+        "hasTitle": true,
+        "hasContent": true,
+        "lines": [
+          {
+            "margin": "12px auto",
+            "fontSize": "20px",
+            "color": "#333",
+            "textAlign": "center",
+            "text": "제목"
+          },
+          {
+            "fontFamily": "Noto Sans",
+            "fontSize": "15px",
+            "fontWeight": "350",
+            "textAlign": "center",
+            "text": "북패드 디지털 콘텐츠를 활용하여 <br />학생들의 지면 학습을 더욱 심도 깊고 <br />쉽게 이해하여 기본 개념을 탄탄하게 합니다."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idx": 4,
+    "type": "text",
+    "text": "텍스트",
+    "style": {
+      "paddingTop": "0px",
+      "paddingBottom": "0px"
+    },
+    "boxes": [
+      {
+        "id": "1",
+        "alignments": "center",
+        "lines": [
+          {
+            "fontSize": "12px",
+            "color": "blue",
+            "fontWeight": "normal",
+            "textAlign": "center",
+            "text": "첫 번째 단락"
+          },
+          {
+            "margin": "7px 0 11px",
+            "fontSize": "16px",
+            "color": "black",
+            "fontWeight": "bolder",
+            "textAlign": "center",
+            "text": "두 번째 단락"
+          },
+          {
+            "fontSize": "12px",
+            "color": "black",
+            "fontWeight": "normal",
+            "textAlign": "center",
+            "text": "세 번째 단락"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "alignments": "center",
+        "lines": [
+          {
+            "margin": "0 0 11px",
+            "fontSize": "24px",
+            "color": "black",
+            "fontWeight": "bolder",
+            "textAlign": "center",
+            "text": "첫 번째 단락"
+          },
+          {
+            "fontSize": "12px",
+            "color": "black",
+            "fontWeight": "normal",
+            "textAlign": "center",
+            "text": "두 번째 단락"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "alignments": "center",
+        "lines": [
+          {
+            "fontSize": "24px",
+            "color": "black",
+            "fontWeight": "bolder",
+            "textAlign": "center",
+            "text": "첫 번째 단락"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "alignments": "center",
+        "lines": [
+          {
+            "fontSize": "16px",
+            "color": "black",
+            "fontWeight": "bolder",
+            "textAlign": "center",
+            "text": "첫 번째 단락"
+          },
+          {
+            "margin": "7px 0 14px",
+            "fontSize": "12px",
+            "color": "black",
+            "fontWeight": "normal",
+            "textAlign": "center",
+            "text": "두 번째 단락"
+          },
+          {
+            "fontSize": "12px",
+            "color": "black",
+            "fontWeight": "normal",
+            "textAlign": "center",
+            "button": "SHOW",
+            "buttonStyle": "textBoxBtn"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "alignments": "center",
+        "lines": [
+          {
+            "fontSize": "12px",
+            "color": "black",
+            "fontWeight": "normal",
+            "textAlign": "center",
+            "text": "첫 번째 단락"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "alignments": "left",
+        "lines": [
+          {
+            "fontSize": "12px",
+            "color": "blue",
+            "fontWeight": "normal",
+            "textAlign": "left",
+            "text": "첫 번째 단락"
+          },
+          {
+            "margin": "5px 0 20px",
+            "fontSize": "16px",
+            "color": "black",
+            "fontWeight": "bolder",
+            "textAlign": "left",
+            "text": "두 번째 단락"
+          },
+          {
+            "fontSize": "12px",
+            "color": "black",
+            "fontWeight": "normal",
+            "textAlign": "left",
+            "button": "SHOW",
+            "buttonStyle": "textBoxBtn2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idx": 5,
+    "type": "table",
+    "text": "표"
+  },
+  {
+    "idx": 6,
+    "type": "layout",
+    "text": "레이아웃",
+    "style": {
+      "paddingTop": "0px",
+      "paddingBottom": "0px"
+    },
+    "boxes": [
+      {
+        "id": "1",
+        "layout": "2 elements, same size",
+        "style": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "alignItems": "stretch"
+        },
+        "elements": [
+          {
+            "layout_id": 1,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          },
+          {
+            "layout_id": 2,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": "2 elements, 1.5:1 ratio",
+        "style": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "alignItems": "stretch"
+        },
+        "elements": [
+          {
+            "layout_id": 1,
+            "style": {
+              "flex": 1.5,
+              "width": "100%"
+            }
+          },
+          {
+            "layout_id": 2,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": "3 elements, same size",
+        "style": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "alignItems": "stretch"
+        },
+        "elements": [
+          {
+            "layout_id": 1,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          },
+          {
+            "layout_id": 2,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          },
+          {
+            "layout_id": 3,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": "1:1.5 row split",
+        "style": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "alignItems": "stretch"
+        },
+        "elements": [
+          {
+            "layout_id": 1,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          },
+          {
+            "style": {
+              "flex": 1.5,
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "space-between",
+              "alignItems": "stretch",
+              "gap": "10px",
+              "width": "100%"
+            },
+            "children": [
+              {
+                "layout_id": 2,
+                "style": {
+                  "flex": 1
+                }
+              },
+              {
+                "layout_id": 3,
+                "style": {
+                  "flex": 1
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "layout": "4 elements, same size",
+        "style": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "alignItems": "stretch"
+        },
+        "elements": [
+          {
+            "layout_id": 1,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          },
+          {
+            "layout_id": 2,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          },
+          {
+            "layout_id": 3,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          },
+          {
+            "layout_id": 4,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "layout": "1:1:1 split, middle split into 2",
+        "style": {
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "space-between"
+        },
+        "elements": [
+          {
+            "layout_id": 1,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          },
+          {
+            "style": {
+              "flex": 1,
+              "width": "100%",
+              "display": "flex",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "alignItems": "stretch",
+              "gap": "10px"
+            },
+            "children": [
+              {
+                "layout_id": 2,
+                "style": {
+                  "flex": 1
+                }
+              },
+              {
+                "layout_id": 3,
+                "style": {
+                  "flex": 1
+                }
+              }
+            ]
+          },
+          {
+            "layout_id": 4,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": "3 vertical elements, same size",
+        "style": {
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "space-between"
+        },
+        "elements": [
+          {
+            "layout_id": 1,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          },
+          {
+            "layout_id": 2,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          },
+          {
+            "layout_id": 3,
+            "style": {
+              "flex": 1,
+              "width": "100%"
+            }
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": "2x2 grid",
+        "style": {
+          "display": "grid",
+          "gridTemplateColumns": "1fr 1fr",
+          "gridTemplateRows": "1fr 1fr",
+          "gap": "10px",
+          "width": "100%"
+        },
+        "elements": [{ "layout_id": 1 }, { "layout_id": 2 }, { "layout_id": 3 }, { "layout_id": 4 }]
+      },
+      {
+        "id": "9",
+        "layout": "0.3 : 1.5",
+        "style": {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "alignItems": "stretch"
+        },
+        "elements": [
+          {
+            "layout_id": 1,
+            "style": {
+              "flex": 0.3,
+              "width": "100%"
+            }
+          },
+          {
+            "style": {
+              "flex": 1.5,
+              "width": "100%",
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "space-between",
+              "gap": "10px"
+            },
+            "children": [
+              {
+                "style": {
+                  "flex": 1,
+                  "width": "100%",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "alignItems": "stretch",
+                  "gap": "10px"
+                },
+                "children": [
+                  {
+                    "layout_id": 2,
+                    "style": {
+                      "flex": 1
+                    }
+                  },
+                  {
+                    "layout_id": 3,
+                    "style": {
+                      "flex": 1
+                    }
+                  },
+                  {
+                    "layout_id": 4,
+                    "style": {
+                      "flex": 1
+                    }
+                  }
+                ]
+              },
+              {
+                "style": {
+                  "flex": 1,
+                  "width": "100%",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "alignItems": "stretch",
+                  "gap": "10px"
+                },
+                "children": [
+                  {
+                    "layout_id": 5,
+                    "style": {
+                      "flex": 1
+                    }
+                  },
+                  {
+                    "layout_id": 6,
+                    "style": {
+                      "flex": 1
+                    }
+                  },
+                  {
+                    "layout_id": 7,
+                    "style": {
+                      "flex": 1
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

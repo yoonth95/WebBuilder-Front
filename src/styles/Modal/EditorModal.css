@@ -1,0 +1,312 @@
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.font-style {
+  font-family: Pretendard;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.editModal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overscroll-behavior-y: contain;
+  z-index: 1000;
+}
+
+.editModal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1220px;
+  height: 673px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 1px solid  #b3b3b3;
+  background-color:  #f3f3f3;
+  box-shadow: 4px 4px 21px 0px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}
+
+.editModal-header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ee7d00;
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 0 63px;
+  font-size: 20px;
+}
+
+.editModal-main {
+  padding: 50px 63px;
+  display: flex;
+  height: 100%;
+}
+
+.editModal-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.editModal-left p {
+  cursor: pointer;
+}
+.editModal_table {
+  flex: 6;
+  display: grid;
+  height: 500px;
+  overflow: auto;
+}
+.editModal_table Table {
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+.editModal_table td {
+  border: 1px dashed black;
+  width: 105px;
+  height: 68px;
+}
+.editModal_table td:hover {
+  border: 1px solid  #ee7d00;
+}
+.editModal-right {
+  flex: 6;
+  display: grid;
+  grid-template-columns: repeat(2, 450px);
+  grid-auto-rows: minmax(160px, 160px);
+  gap: 15px;
+  height: 500px;
+  overflow: auto;
+}
+
+.editModal-right::-webkit-scrollbar {
+  width: 6px;
+}
+.editModal-right::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 10px;
+}
+.editModal-right::-webkit-scrollbar-track {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.designSelect {
+  color: #ee7d00;
+}
+
+.typeBox {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.typeBox:hover {
+  box-shadow: 1px 1px 20px #ddd;
+}
+
+.parentBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 3%;
+}
+
+.imageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 130px;
+  background-color:  #ccc;
+  color: #fff;
+}
+.imageBox:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.listBox {
+  width: 100%;
+  text-align: center;
+}
+
+.listBox p {
+  width: 70%;
+  margin: auto;
+}
+
+.listImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #eaeaea;
+}
+
+.circle {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+
+.rectangle {
+  width: 125px;
+  height: 65px;
+}
+
+.square {
+  width: 70px;
+  height: 70px;
+}
+
+.wideRectangle {
+  width: 150px;
+  height: 60px;
+}
+
+.listBox .title {
+  margin: 5px auto;
+  font-size: 10px;
+  color: #333;
+}
+
+.listBox .titleColor {
+  margin: 2px auto;
+  color: #ee7d00;
+  font-family: Noto Sans;
+  font-size: 10px;
+  font-weight: 350;
+}
+
+.listBox .subtitle {
+  margin: 4px auto 9px;
+  font-size: 10px;
+  transform: translate(0%, -25%) scale(0.5); /* font-size는 최소 10px이기 때문에 더 작게 표현하기 위해 작성 본문에는 더 크게 보여줄 예정 */
+  font-family: Noto Sans;
+}
+
+.listBox .details {
+  font-family: Noto Sans;
+  font-size: 10px;
+  transform: translate(0%, -15%) scale(0.6);
+  font-weight: 350;
+  color: #666;
+}
+
+.listBox .content {
+  font-family: Noto Sans;
+  font-size: 10px;
+  transform: translate(0%, -10%) scale(0.8);
+  font-weight: 350;
+}
+
+.listBox .text {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+}
+
+.listBox .tinyText {
+  font-family: Noto Sans;
+  font-size: 10px;
+  transform: translate(0%, -50%) scale(0.7);
+  font-weight: 350;
+  color: #666;
+}
+
+.textBox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textBox p {
+  word-wrap: break-word;
+}
+
+.textBoxBtn,
+.textBoxBtn2 {
+  display: block;
+  width: 80px;
+  height: 20px;
+  background-color: #666;
+  color: #fff;
+  font-size: 12px;
+}
+
+.textBoxBtn {
+  margin: auto;
+}
+
+.textBoxBtn2 {
+  border-radius: 10px;
+}
+
+.layoutBox {
+  border: 1px dashed #333;
+  background-color: #f3f3f3;
+}
+.editMenu-select-btn {
+  width: 80%;
+  background-color: #ee7d00;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 5px;
+  color: #f3f3f3;
+  margin-top: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.editMenu-select-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 1180px) {
+  .editModal-container{
+    width: 760px;
+  } 
+  .editModal-right {
+    grid-template-columns: repeat(1, 505px);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .editModal-container {
+    width: 340px;
+  }
+  .editModal-right {
+    grid-template-columns: repeat(1, 400px);
+    justify-content: center;
+  }
+  .editModal-left p {
+    writing-mode: vertical-lr;
+}
+}

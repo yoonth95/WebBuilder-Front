@@ -1,0 +1,35 @@
+@keyframes dropdown-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.dropdown {
+  overflow: hidden;
+}
+
+.dropdown > ul,
+.dropdown > form {
+  animation: dropdown-animation 0.5s ease;
+}
+
+@keyframes dropup-animation {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.dropup {
+  overflow: hidden;
+}
+
+.dropup > ul,
+.dropup > form {
+  animation: dropup-animation 0.7s ease;
+}

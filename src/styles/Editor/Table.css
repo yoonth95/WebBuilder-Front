@@ -1,0 +1,28 @@
+.table_wrap {
+  display: flex;
+  flex-direction: column;
+}
+.table_wrap p {
+  padding-left: 10px;
+  color:  #333;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+.cancle-btn {
+  border: 1px solid #EE7D00;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 50%;
+  background-color: #eee;
+  color: #EE7D00;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cancle-btn:hover {
+  background-color: #EE7D00;
+  color: #f3f3f3;
+}

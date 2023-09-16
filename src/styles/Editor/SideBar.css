@@ -1,0 +1,111 @@
+.range_datalist {
+	margin-top: 2px;
+	position: relative;
+	padding-bottom: 20px;
+	font-size: 13px;
+}
+.range_datalist li::before {
+	display: block;
+	content: '';
+	width: 1px;
+	height: 8px;
+	position: absolute;
+	top: -6px;
+	background: #f3f3f3;
+}
+.range_datalist li {
+	position: absolute;
+	top: 0;
+	padding-top: 5px;
+	color: #f3f3f3;
+	font-size: 5px;
+}
+.range_datalist li:first-child::before {
+	left: 3px;
+}
+.range_datalist li:nth-child(2) {
+	left: 50%;
+	transform: translateX(-50%);
+}
+.range_datalist li:nth-child(2):before {
+	left: 10px;
+}
+.range_datalist li:last-child {
+	left: 100%;
+	transform: translateX(-14px);
+}
+.range_datalist li:last-child:before {
+	left: 11px;
+}
+
+.num {
+	color: #ee7d00;
+}
+
+.title1 {
+	color: #f3f3f3;
+	margin-left: 8px;
+}
+.title_wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 15px;
+	background-color: #333;
+	/* border-radius: 20px; */
+}
+.title_wrap h3 {
+	color: #f3f3f3;
+}
+
+.range_style1 {
+	margin-bottom: 10px;
+}
+.sub_menu_list{
+	padding: 20px;
+}
+
+input[type=range] {
+	width: 100%;
+}
+.widthSet_wrap{
+	display: flex;
+	align-items: center;
+	padding: 10px 15px;
+}
+.widthSet_wrap input[type='checkbox'] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  background: white;
+  position: relative;
+  border: 1px solid #000;
+	background-color: #555;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.widthSet_wrap input[type='checkbox']:checked::after {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: url('https://wooks.clickn.co.kr/images/ico_check_orange.png') 50% 50% no-repeat;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.widthSet_wrap label {
+	color: #888;
+}
+.widthSet_wrap:hover label {
+	color: #f3f3f3;
+}
+
+input[type=color] {
+	width: 40%;
+	height: 35px;
+	cursor: pointer;
+}

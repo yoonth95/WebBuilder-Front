@@ -1,0 +1,50 @@
+.list_select_option {
+  width: 90%;
+  line-height: 17px;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.selected_option {
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  background:  #f3f3f3;
+  padding: 15.5px 10px;
+}
+.selected_option.open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.select_option_wrap {
+  position: absolute;
+  background: rgba(243, 243, 243);
+  z-index: 9999;
+  height: 0;
+  overflow: auto;
+  width: 100%;
+  transition: height 0.5s ease;
+}
+
+.select_option_wrap.open {
+  display: block;
+  height: 200px;
+}
+
+.disabled_option {
+  font-size: 15px;
+  margin: 15px 17px 5px 17px;
+  color: gray;
+  font-weight: 600;
+}
+
+.select_option {
+  margin: 13px 25px;
+  font-weight: 700;
+}
+
+.select_option:hover {
+  color: #ee7d00;
+}
