@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/api/*"
-  to = "https://port-0-webbuilder-back-5mk12alp6dco7g.sel5.cloudtype.app/api/:splat"
+  to = "http://13.209.201.210:5000/api/:splat"
   status = 200
   force = true

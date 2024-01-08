@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://port-0-webbuilder-back-5mk12alp6dco7g.sel5.cloudtype.app/',
+      target: 'http://13.209.201.210:5000',
       changeOrigin: true,
     }),
   );
