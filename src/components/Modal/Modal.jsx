@@ -98,7 +98,7 @@ const Modal = ({ isOpen, setIsOpen }) => {
                   <input type='text' className='pageInput' name='link' placeholder='페이지 주소' value={link} onChange={handleChange} />
                   <div className='modal_page_infor'>
                     <p>{`https://woongjin-web-builder.netlify.app/main/${location.pathname.split('/').at(-1)}/pages/${link}`}</p>
-                    <div style={{ display: btn === '복제' ? 'none' : 'block' }}>
+                    <div className='modal_page_check' style={{ display: btn === '복제' ? 'none' : 'block' }}>
                       <input type='checkbox' name='new_window' checked={new_window} onChange={handleChange} />
                       새창 열기
                     </div>
