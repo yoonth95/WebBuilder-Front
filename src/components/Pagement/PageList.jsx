@@ -1,16 +1,14 @@
 import React from 'react';
 import { setBtn } from 'redux/buttonSlice';
 import { setPageId } from 'redux/pageSlice';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
-
-const PageList = ({menu,parentList,setIsOpen,dispatch}) => {
+const PageList = ({ menu, parentList, setIsOpen, dispatch }) => {
   const navigate = useNavigate();
 
   const dateFormat = (updatedAt) => {
     const updatedAtDate = new Date(updatedAt);
-    const koreanTimezoneOffset = 9 * 60;
-    const koreanTime = new Date(updatedAtDate.getTime() + koreanTimezoneOffset * 60000);
+    const koreanTime = new Date(updatedAtDate.getTime());
     return koreanTime.toISOString().slice(0, 19).replace('T', ' ');
   };
 
@@ -33,7 +31,7 @@ const PageList = ({menu,parentList,setIsOpen,dispatch}) => {
           onClick={() => {
             setIsOpen(true);
             dispatch(setBtn('복제'));
-            dispatch(setPageId(menu.idx))
+            dispatch(setPageId(menu.idx));
           }}
         >
           복제
