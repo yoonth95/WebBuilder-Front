@@ -1,7 +1,7 @@
 export const UploadImageAPI = (formData, setProgress) => {
   return new Promise((resolve, reject) => {
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://13.209.201.210:5000/api/uploadImage', true);
+    xhr.open('POST', '/api/uploadImage', true);
 
     xhr.upload.addEventListener('progress', (e) => {
       if (e.lengthComputable) {
