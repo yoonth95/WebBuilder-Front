@@ -44,7 +44,9 @@
 }
 
 .modal_infor_box p {
+  width: 80%;
   font-size: 16px;
+  word-break: break-all;
 }
 
 .modal_infor_box select {
@@ -55,9 +57,15 @@
   border: none;
 }
 .modal_page_infor {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
+}
+
+.modal_page_infor .modal_page_check {
+  width: 20%;
+  text-align: end;
 }
 
 .modal_page_infor input {
@@ -115,7 +123,7 @@
   border: 1px solid #ee7d00;
   border-radius: 50%;
 }
-.notUse:hover{
+.notUse:hover {
   cursor: pointer;
 }
 .modal_link_check.checked .notUse {
