@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useSelector,useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useMenuActions } from 'hooks/useMenu';
 import { useEditorActions } from 'hooks/useEditor';
 import { showAlert } from 'redux/AlertSlice';
@@ -97,7 +97,7 @@ const Modal = ({ isOpen, setIsOpen }) => {
                   <input ref={inputRef} type='text' className='pageInput' name='title' placeholder={btn === '메뉴' ? '메뉴 항목' : `페이지 명`} value={title} onChange={handleChange} />
                   <input type='text' className='pageInput' name='link' placeholder='페이지 주소' value={link} onChange={handleChange} />
                   <div className='modal_page_infor'>
-                    <p>{`http://localhost:3000/main/${location.pathname.split("/").at(-1)}/pages/${link}`}</p>
+                    <p>{`https://woongjin-web-builder.netlify.app/main/${location.pathname.split('/').at(-1)}/pages/${link}`}</p>
                     <div style={{ display: btn === '복제' ? 'none' : 'block' }}>
                       <input type='checkbox' name='new_window' checked={new_window} onChange={handleChange} />
                       새창 열기
@@ -105,7 +105,7 @@ const Modal = ({ isOpen, setIsOpen }) => {
                   </div>
                 </>
               ) : (
-                <SelectBox type={'복제'} secondList={secondList} link={link} handleLinkChange={handleChange} setSelectIdx={setSelectIdx} page={page}/>
+                <SelectBox type={'복제'} secondList={secondList} link={link} handleLinkChange={handleChange} setSelectIdx={setSelectIdx} page={page} />
               )}
             </div>
             <div className='modal_btn_box'>
@@ -113,7 +113,6 @@ const Modal = ({ isOpen, setIsOpen }) => {
               <button onClick={addMenu}>저장</button>
             </div>
           </div>
-
         </div>
       )}
     </>
