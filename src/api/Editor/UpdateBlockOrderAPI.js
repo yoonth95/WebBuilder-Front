@@ -1,8 +1,8 @@
 export const UpdateBlockOrderAPI = async (block_id, block_order) => {
   try {
-    const res = await fetch('/api/orderBlock', {
+    const res = await fetch(`${process.env.REACT_APP_ENDPOINT_URL}/api/orderBlock`, {
       method: 'PUT',
-      body: JSON.stringify({block_id, block_order}),
+      body: JSON.stringify({ block_id, block_order }),
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
     });

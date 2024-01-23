@@ -1,6 +1,6 @@
 export const DeleteMenuAPI = async (id, order_num, parent_id, userID) => {
   try {
-    const res = await fetch(`/api/deleteMenu/${id}_${order_num}_${parent_id}_${userID}`, {
+    const res = await fetch(`${process.env.REACT_APP_ENDPOINT_URL}/api/deleteMenu/${id}_${order_num}_${parent_id}_${userID}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',

@@ -1,6 +1,6 @@
 export const signupAPI = async (name, id, pw) => {
   try {
-    const res = await fetch('/api/signup', {
+    const res = await fetch(`${process.env.REACT_APP_ENDPOINT_URL}/api/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',

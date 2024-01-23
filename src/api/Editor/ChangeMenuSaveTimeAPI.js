@@ -1,8 +1,8 @@
 export const ChangeMenuSaveTimeAPI = async (page_idx, save_time) => {
   try {
-    const res = await fetch('/api/changeMenuSaveTimeAPI', {
+    const res = await fetch(`${process.env.REACT_APP_ENDPOINT_URL}/api/changeMenuSaveTimeAPI`, {
       method: 'POST',
-      body: JSON.stringify({page_idx, save_time}),
+      body: JSON.stringify({ page_idx, save_time }),
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
     });

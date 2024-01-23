@@ -1,6 +1,6 @@
 export const InsertBlockAPI = async (newBlock) => {
   try {
-    const res = await fetch('/api/insertBlock', {
+    const res = await fetch(`${process.env.REACT_APP_ENDPOINT_URL}/api/insertBlock`, {
       method: 'POST',
       body: JSON.stringify(newBlock),
       headers: { 'Content-Type': 'application/json' },

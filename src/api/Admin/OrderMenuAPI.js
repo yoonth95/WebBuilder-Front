@@ -1,8 +1,8 @@
 export const OrderMenuAPI = async (listData) => {
   try {
-    const res = await fetch('/api/orderMenu', {
+    const res = await fetch(`${process.env.REACT_APP_ENDPOINT_URL}/api/orderMenu`, {
       method: 'PUT',
-      body: JSON.stringify({listData}),
+      body: JSON.stringify({ listData }),
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
     });

@@ -1,6 +1,6 @@
 export const UpdateMenuAPI = async (formData) => {
   try {
-    const res = await fetch('/api/updateMenu', {
+    const res = await fetch(`${process.env.REACT_APP_ENDPOINT_URL}/api/updateMenu`, {
       method: 'PUT',
       body: JSON.stringify(formData),
       headers: { 'Content-Type': 'application/json' },

@@ -1,8 +1,8 @@
 export const UpdateBlockDesignAPI = async (block_id, design_type, design_id, content) => {
   try {
-    const res = await fetch('/api/updateBlockDesign', {
+    const res = await fetch(`${process.env.REACT_APP_ENDPOINT_URL}/api/updateBlockDesign`, {
       method: 'PUT',
-      body: JSON.stringify({block_id, design_type, design_id, content}),
+      body: JSON.stringify({ block_id, design_type, design_id, content }),
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
     });

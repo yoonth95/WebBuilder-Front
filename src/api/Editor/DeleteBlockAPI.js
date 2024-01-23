@@ -1,6 +1,6 @@
 export const DeleteBlockAPI = async (block_id) => {
   try {
-    const res = await fetch(`/api/deleteBlock/${block_id}`, {
+    const res = await fetch(`${process.env.REACT_APP_ENDPOINT_URL}/api/deleteBlock/${block_id}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
