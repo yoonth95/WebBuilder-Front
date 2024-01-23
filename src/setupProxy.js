@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'http://13.209.201.210:5000',
+      target: process.env.REACT_APP_ENDPOINT_URL,
       changeOrigin: true,
     }),
   );
