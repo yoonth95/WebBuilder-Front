@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateList } from 'redux/editorSlice';
 import { showAlert } from 'redux/AlertSlice';
 
-
 // 컴포넌트
 import Spinner from 'components/Spinner/Spinner';
 import AdminHeader from 'components/Admin/AdminHeader';
@@ -29,7 +28,7 @@ const Pagement = ({ setIsOpen, setIsLoading, isLoading }) => {
   const [searchValue, setSearchValue] = useState('');
   const Page = 5;
   const { user } = useSelector((state) => state.user);
-  
+
   const getMenu = async () => {
     setIsLoading(true);
     try {
@@ -46,6 +45,7 @@ const Pagement = ({ setIsOpen, setIsLoading, isLoading }) => {
 
   useEffect(() => {
     getMenu();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handlePageChange = (pageNumber) => {
@@ -57,7 +57,7 @@ const Pagement = ({ setIsOpen, setIsLoading, isLoading }) => {
     const First = Last - Page;
     const sortedList = [...pageList].sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     return sortedList.slice(First, Last);
-};
+  };
 
   const totalPages = Math.ceil(pageList.length / Page);
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);

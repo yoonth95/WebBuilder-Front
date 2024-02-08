@@ -22,7 +22,8 @@ const useAuth = async (setIsLoading, setIsAuthenticated) => {
     };
 
     getUser();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
-};  
+};
 
 export default useAuth;

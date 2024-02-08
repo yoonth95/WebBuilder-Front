@@ -3,7 +3,7 @@ import { useNavigate, useMatch } from 'react-router-dom';
 
 // redux
 import { useDispatch, useSelector } from 'react-redux';
-import { showAlert, showConfirm, showToast, hideToast } from 'redux/AlertSlice';
+import { showAlert, showConfirm, showToast } from 'redux/AlertSlice';
 
 // hooks
 import { useEditorActions } from 'hooks/useEditor';
@@ -29,7 +29,7 @@ const Editor = ({ isLoading, setIsLoading }) => {
   const blocks = useSelector((state) => state.editor.blockList);
   const [error, setError] = useState(null);
   const [screenSize, setScreenSize] = useState('desktop');
-  const [blockStyle, setBlockStyle] = useState([]); // 블록 스타일 상태 값
+  const [, setBlockStyle] = useState([]); // 블록 스타일 상태 값
   const [historyList, setHistoryList] = useState([]); // 히스토리 리스트
   const [showHistory, setShowHistory] = useState(false); // 히스토리 토글
   const [isWaiting, setIsWaiting] = useState(false); // 블록 추가, 삭제, 순서 변경 시 대기 상태
@@ -43,6 +43,7 @@ const Editor = ({ isLoading, setIsLoading }) => {
       await getBlocksAction(Number(page_idx), setIsLoading, setError, setBlockStyle, setHistoryList, setIsWaiting, setOriginalData);
     };
     getBlocks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page_idx]);
 
   // 블록 추가
@@ -100,9 +101,9 @@ const Editor = ({ isLoading, setIsLoading }) => {
   };
 
   // 미리보기
-  const handlePreview = () => {
-    dispatch(showAlert('미리보기'));
-  };
+  // const handlePreview = () => {
+  //   dispatch(showAlert('미리보기'));
+  // };
 
   // 에디터 저장
   const handleSave = async () => {
@@ -160,6 +161,7 @@ const Editor = ({ isLoading, setIsLoading }) => {
       dispatch(showAlert('에러', error));
       navigate(-1);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [error]);
 
   return (

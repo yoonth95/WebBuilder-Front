@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateList } from 'redux/editorSlice';
 import 'styles/Modal/LinkModal.css';
@@ -13,7 +13,7 @@ const LinkModal = ({ block_id, idx, setIsOpen, isOpen, LinkDic }) => {
 
   const { secondList } = useSelector((state) => state.menu);
   const { user } = useSelector((state) => state.user);
-  const blocks = useSelector(state => state.editor.blockList);
+  const blocks = useSelector((state) => state.editor.blockList);
 
   const dispatch = useDispatch();
 
@@ -43,20 +43,18 @@ const LinkModal = ({ block_id, idx, setIsOpen, isOpen, LinkDic }) => {
 
   const updateLink = (images, href) => {
     if (LinkDic.idx === undefined) {
-      return images.map(image => ({ ...image, href }));
+      return images.map((image) => ({ ...image, href }));
     } else {
-      return images.map((image, i) =>
-        i === LinkDic.idx ? { ...image, href } : image
-      );
+      return images.map((image, i) => (i === LinkDic.idx ? { ...image, href } : image));
     }
-  }
+  };
 
   const updateHrefInLayoutDesign = (layoutDesign, href) => {
     const parsedLayoutDesign = JSON.parse(layoutDesign);
-  
-    const updatedLayoutDesign = parsedLayoutDesign.map(layout => {
+
+    const updatedLayoutDesign = parsedLayoutDesign.map((layout) => {
       const layoutIdFromLinkDic = parseInt(LinkDic.isLayout.split('_')[1], 10);
-      console.log(layoutIdFromLinkDic)
+      console.log(layoutIdFromLinkDic);
       if (layout.layout_id === layoutIdFromLinkDic) {
         const updatedImages = layout.boxes.images.map((image, i) => {
           if (i === LinkDic.idx) {
@@ -64,43 +62,44 @@ const LinkModal = ({ block_id, idx, setIsOpen, isOpen, LinkDic }) => {
           }
           return image;
         });
-  
+
         return {
           ...layout,
           boxes: {
             ...layout.boxes,
-            images: updatedImages
-          }
+            images: updatedImages,
+          },
         };
       }
       return layout;
     });
-  
+
     return JSON.stringify(updatedLayoutDesign);
-  }  
-  
-  const updateBlockLink = (href) => {
-    dispatch(updateList(blocks.map(block => {
-      if (block.block_id === block_id && block.layout_design) {  
-        return {
-          ...block,
-          layout_design: updateHrefInLayoutDesign(block.layout_design, href)
-        };
-      } else if (block.block_id === block_id && block.content && block.content.images) {
-        return {
-          ...block,
-          content: {
-            ...block.content,
-            images: updateLink(block.content.images, href)
-          }
-        };
-      }
-      return block;  
-    })));
   };
-  
-  
-  
+
+  const updateBlockLink = (href) => {
+    dispatch(
+      updateList(
+        blocks.map((block) => {
+          if (block.block_id === block_id && block.layout_design) {
+            return {
+              ...block,
+              layout_design: updateHrefInLayoutDesign(block.layout_design, href),
+            };
+          } else if (block.block_id === block_id && block.content && block.content.images) {
+            return {
+              ...block,
+              content: {
+                ...block.content,
+                images: updateLink(block.content.images, href),
+              },
+            };
+          }
+          return block;
+        }),
+      ),
+    );
+  };
 
   const handleOptionChange = (e) => {
     const selectedPage = secondList.find((item) => item.idx === Number(e.target.value));
@@ -156,11 +155,17 @@ const LinkModal = ({ block_id, idx, setIsOpen, isOpen, LinkDic }) => {
             <input type='checkbox' className='notUse' checked={isUrlChecked} onChange={handleUrlCheckboxChange} />
             <label className={isUrlChecked ? '' : 'strikethrough'}>URL 입력</label>
           </div>
-          <input type='text' className='pageInput' placeholder='https://로 시작되는 링크 주소 입력' disabled={!isUrlChecked} style={{ marginBottom: '40px', paddingLeft: '20px' }} onChange={(e) => setInputURL(e.target.value)} value={inputURL}  />
+          <input
+            type='text'
+            className='pageInput'
+            placeholder='https://로 시작되는 링크 주소 입력'
+            disabled={!isUrlChecked}
+            style={{ marginBottom: '40px', paddingLeft: '20px' }}
+            onChange={(e) => setInputURL(e.target.value)}
+            value={inputURL}
+          />
         </div>
-        {validationError && 
-          <div style={{ color: '#EE7D00', paddingLeft:'22px',position:'relative', top:'-35px' }}>{validationError}</div>
-        }
+        {validationError && <div style={{ color: '#EE7D00', paddingLeft: '22px', position: 'relative', top: '-35px' }}>{validationError}</div>}
         <div className='modal_btn_box'>
           <button onClick={() => setIsOpen(false)}>닫기</button>
           <button onClick={handleConfirmClick}>확인</button>

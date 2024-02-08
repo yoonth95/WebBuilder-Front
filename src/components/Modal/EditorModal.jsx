@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
-//redux 
+//redux
 import { showAlert } from 'redux/AlertSlice';
 
 // hooks
 import { useEditorActions } from 'hooks/useEditor';
-
 
 // 컴포넌트 및 데이터
 import designType from 'data/designType';

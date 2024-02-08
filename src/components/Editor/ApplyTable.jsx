@@ -188,7 +188,7 @@ const selectTableHeaders = (state, block_id, cols) => {
 };
 
 const ApplyTable = ({ design_id, handleCellChange, block_id, handleColumnNameChange, handleUpdateText, screenSize }) => {
-  const [designSize, setDesignSize] = useState(design_id.split(',').map(Number));
+  const [designSize] = useState(design_id.split(',').map(Number));
   const [rows, cols] = designSize;
   const blocks = useSelector((state) => state.editor.blockList);
   const tableDataFromRedux = useSelector((state) => selectTableData(state, block_id));

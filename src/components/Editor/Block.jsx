@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { updateList } from 'redux/editorSlice';
 
 import PropTypes from 'prop-types';
@@ -31,14 +31,14 @@ function Block({ block_id, design_type, design_id, block_order, layout_design, b
   const location = useLocation();
   const dispatch = useDispatch();
   const [showBlockBtn, setShowBlockBtn] = useState(false);
-  const [checkBtn, setCheckBtn] = useState((blockStyle?.style.maxWidth === '100%' ? true : false) || false);
+  const [checkBtn] = useState((blockStyle?.style.maxWidth === '100%' ? true : false) || false);
   const [isLayoutDesign, setIsLayoutDesign] = useState(false);
   const [layoutId, setLayoutId] = useState(0);
-  const [progress, setProgress] = useState(0);
+  const [, setProgress] = useState(0);
   const [sideBarOpen, setSideBarOpen] = useState({ open: false, block_id: '' });
   const [isModalOpen, setIsModalOpen] = useState({ open: false, block_id: '' });
   const [isOpen, setIsOpen] = useState(false);
-  const blocks = useSelector((state) => state.editor.blockList);
+  // const blocks = useSelector((state) => state.editor.blockList);
 
   const [LinkDic, setLinkDic] = useState({
     layout_id: '',

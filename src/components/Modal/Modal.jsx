@@ -41,6 +41,7 @@ const Modal = ({ isOpen, setIsOpen }) => {
     if (btn !== '복제' && isOpen) {
       inputRef.current.focus();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   const handleModalContentClick = (event) => {

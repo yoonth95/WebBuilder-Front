@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { useSelector, useDispatch } from 'react-redux';
@@ -8,7 +8,7 @@ const TextEditor = ({ line, index, handleUpdateText, block_id, isLayout, screenS
   const blocks = useSelector((state) => state.editor.blockList);
   const dispatch = useDispatch();
 
-  const [editor, setEditor] = useState(null);
+  // const [editor, setEditor] = useState(null);
 
   const isWrappedWithPTag = (text) => {
     if (text.startsWith('<p')) return true;
@@ -17,9 +17,9 @@ const TextEditor = ({ line, index, handleUpdateText, block_id, isLayout, screenS
 
   const editorData = isWrappedWithPTag(line.text) ? line.text : `<p style="text-align: ${line.textAlign};">${line.text}</p>`;
 
-  const handleEditorReady = (editor) => {
-    setEditor(editor);
-  };
+  // const handleEditorReady = (editor) => {
+  //   setEditor(editor);
+  // };
 
   const handleEditorChange = (event, editor) => {
     const data = editor.getData();

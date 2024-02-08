@@ -3,7 +3,7 @@ import 'styles/Admin/AdminHeader.css';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logoutAPI } from 'api/User/logoutAPI';
-import { showConfirm } from 'redux/AlertSlice'; 
+import { showConfirm } from 'redux/AlertSlice';
 
 const AdminHeader = () => {
   const [tab, setTab] = useState('menu');
@@ -23,13 +23,15 @@ const AdminHeader = () => {
   };
 
   const logoutBtn = () => {
-    dispatch(showConfirm({
-      message: '로그아웃 하시겠습니까?',
-      onConfirm: async () => {
-        logoutAPI(dispatch);
-        navigate('/')
-      },
-  }));
+    dispatch(
+      showConfirm({
+        message: '로그아웃 하시겠습니까?',
+        onConfirm: async () => {
+          logoutAPI(dispatch);
+          navigate('/');
+        },
+      }),
+    );
   };
 
   useEffect(() => {
@@ -40,23 +42,26 @@ const AdminHeader = () => {
     } else {
       setTab(tabValue === 'b' ? 'page' : 'menu');
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   return (
     <header className='header'>
       <div className='info_box'>
-        <img src="https://cache.wjthinkbig.com/WEB_RESOURCE/WJBOOKCLUB/images/layout_2023/logo.png" onClick={() => onBtnClick('menu')} alt='로고 이미지' />
+        <img src='https://cache.wjthinkbig.com/WEB_RESOURCE/WJBOOKCLUB/images/layout_2023/logo.png' onClick={() => onBtnClick('menu')} alt='로고 이미지' />
         <div>
-          <span onClick={() => navigate(`/main/${location.pathname.split("/").at(-1)}`)}>메인페이지</span>
-          <span className='line' style={{textAlign: "center"}}>&#124;</span>
+          <span onClick={() => navigate(`/main/${location.pathname.split('/').at(-1)}`)}>메인페이지</span>
+          <span className='line' style={{ textAlign: 'center' }}>
+            &#124;
+          </span>
           <span onClick={logoutBtn}>로그아웃</span>
         </div>
       </div>
       <div className='btn_box'>
-        <button className={tab === 'menu' ? 'check' : ''} onClick={() => onBtnClick('menu')} >
+        <button className={tab === 'menu' ? 'check' : ''} onClick={() => onBtnClick('menu')}>
           페이지 관리
         </button>
-        <button className={tab === 'page' ? 'check' : ''} onClick={() => onBtnClick('page')} >
+        <button className={tab === 'page' ? 'check' : ''} onClick={() => onBtnClick('page')}>
           디자인 관리
         </button>
       </div>

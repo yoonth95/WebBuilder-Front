@@ -24,6 +24,7 @@ const Nav = ({ isLoading, setIsLoading, type, windowWidth, screenSize }) => {
     };
 
     fetchMenu();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

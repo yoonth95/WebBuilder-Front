@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Nav from 'components/Main/Nav';
 import { GetBlocksAPI } from 'api/Editor';
-import designType from 'data/designType';
 import { DetailRenderBox } from 'components/Detail/DetailRenderBox';
 import ApplyTable from 'components/Editor/ApplyTable';
 import 'styles/Detail/Detail.css';
@@ -38,6 +37,7 @@ const Detail = ({ isLoading, setIsLoading, setError }) => {
     };
 
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filterData]);
 
   const renderBox = (block) => {

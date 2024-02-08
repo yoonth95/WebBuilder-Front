@@ -23,6 +23,7 @@ const SideBar = ({ sideBarOpen, setSideBarOpen }) => {
       setBlockBackgroundColor(block_style.style.backgroundColor || '#ffffff');
       setBlockCheckBtn(block_style.style.maxWidth === '1240px' ? false : true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sideBarOpen]);
 
   // 블록 너비 설정
@@ -36,15 +37,19 @@ const SideBar = ({ sideBarOpen, setSideBarOpen }) => {
         backgroundColor: blockBackgroundColor,
       },
       block_id: sideBarOpen.block_id,
-    }
+    };
 
-    dispatch(updateList(blockList.map(block => {
-      if (block.block_id === sideBarOpen.block_id) {
-        return { ...block, block_style: JSON.stringify(block_style) };
-      } else {
-        return block;
-      }
-    })));
+    dispatch(
+      updateList(
+        blockList.map((block) => {
+          if (block.block_id === sideBarOpen.block_id) {
+            return { ...block, block_style: JSON.stringify(block_style) };
+          } else {
+            return block;
+          }
+        }),
+      ),
+    );
   };
 
   // 블록 padding top 설정
@@ -58,15 +63,19 @@ const SideBar = ({ sideBarOpen, setSideBarOpen }) => {
         backgroundColor: blockBackgroundColor,
       },
       block_id: sideBarOpen.block_id,
-    }
+    };
 
-    dispatch(updateList(blockList.map(block => {
-      if (block.block_id === sideBarOpen.block_id) {
-        return { ...block, block_style: JSON.stringify(block_style) };
-      } else {
-        return block;
-      }
-    })));
+    dispatch(
+      updateList(
+        blockList.map((block) => {
+          if (block.block_id === sideBarOpen.block_id) {
+            return { ...block, block_style: JSON.stringify(block_style) };
+          } else {
+            return block;
+          }
+        }),
+      ),
+    );
   };
 
   // 블록 padding bottom 설정
@@ -80,15 +89,19 @@ const SideBar = ({ sideBarOpen, setSideBarOpen }) => {
         backgroundColor: blockBackgroundColor,
       },
       block_id: sideBarOpen.block_id,
-    }
+    };
 
-    dispatch(updateList(blockList.map(block => {
-      if (block.block_id === sideBarOpen.block_id) {
-        return { ...block, block_style: JSON.stringify(block_style) };
-      } else {
-        return block;
-      }
-    })));
+    dispatch(
+      updateList(
+        blockList.map((block) => {
+          if (block.block_id === sideBarOpen.block_id) {
+            return { ...block, block_style: JSON.stringify(block_style) };
+          } else {
+            return block;
+          }
+        }),
+      ),
+    );
   };
 
   // 블록 배경색 설정
@@ -102,15 +115,19 @@ const SideBar = ({ sideBarOpen, setSideBarOpen }) => {
         backgroundColor: e,
       },
       block_id: sideBarOpen.block_id,
-    }
+    };
 
-    dispatch(updateList(blockList.map(block => {
-      if (block.block_id === sideBarOpen.block_id) {
-        return { ...block, block_style: JSON.stringify(block_style) };
-      } else {
-        return block;
-      }
-    })));
+    dispatch(
+      updateList(
+        blockList.map((block) => {
+          if (block.block_id === sideBarOpen.block_id) {
+            return { ...block, block_style: JSON.stringify(block_style) };
+          } else {
+            return block;
+          }
+        }),
+      ),
+    );
   };
 
   return (
@@ -128,7 +145,7 @@ const SideBar = ({ sideBarOpen, setSideBarOpen }) => {
       </div>
       {/* 블록 너비 설정 */}
       <div className='widthSet_wrap' onChange={() => handleWidthChange(!blockCheckBtn)}>
-        <input type='checkbox' id='widthCheck' checked={blockCheckBtn} readOnly/>
+        <input type='checkbox' id='widthCheck' checked={blockCheckBtn} readOnly />
         <label htmlFor='widthCheck'>화면 너비에 맞추기</label>
       </div>
       {/* 블록 패딩 설정 */}
@@ -148,7 +165,9 @@ const SideBar = ({ sideBarOpen, setSideBarOpen }) => {
               type='range'
               className='radioCheckSelect range_style1'
               name='padding_top'
-              min='0' max='400' step='10'
+              min='0'
+              max='400'
+              step='10'
               value={blockPaddingTop}
               onChange={(e) => setBlockPaddingTop(e.target.value)}
               onMouseUp={(e) => handleTopPaddingChange(e.target.value)}
@@ -172,7 +191,9 @@ const SideBar = ({ sideBarOpen, setSideBarOpen }) => {
               type='range'
               className='radioCheckSelect range_style1'
               name='padding_bottom'
-              min='0' max='400' step='10'
+              min='0'
+              max='400'
+              step='10'
               value={blockPaddingBottom}
               onChange={(e) => setBlockPaddingBottom(e.target.value)}
               onMouseUp={(e) => handleBottomPaddingChange(e.target.value)}
@@ -190,12 +211,7 @@ const SideBar = ({ sideBarOpen, setSideBarOpen }) => {
         <p className='title1'>배경색 설정</p>
       </div>
       <div style={{ padding: '20px' }}>
-        <input 
-          type="color" 
-          className='sidebarColor' 
-          defaultValue={blockBackgroundColor} 
-          onBlur={(e) => handleBackgroundColorChange(e.target.value)}
-        />
+        <input type='color' className='sidebarColor' defaultValue={blockBackgroundColor} onBlur={(e) => handleBackgroundColorChange(e.target.value)} />
       </div>
     </div>
   );

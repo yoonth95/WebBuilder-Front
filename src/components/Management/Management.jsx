@@ -14,7 +14,6 @@ import AdminHeader from 'components/Admin/AdminHeader';
 import Spinner from 'components/Spinner/Spinner';
 import Dropdown from 'components/DropDown/DropDown';
 
-
 // css
 import 'styles/Management/Management.css';
 
@@ -27,6 +26,7 @@ const Management = ({ setIsOpen, setIsLoading, isLoading }) => {
 
   useEffect(() => {
     getMenuAction(setIsLoading); // 메뉴 조회
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // 메뉴 drop down
@@ -51,12 +51,14 @@ const Management = ({ setIsOpen, setIsLoading, isLoading }) => {
 
   // 메뉴 삭제
   const deleteMenu = (id, order_num, parent_id) => {
-    dispatch(showConfirm({
-      message: '해당 메뉴를 삭제 하시겠습니까?',
-      onConfirm: async () => {
-       await deleteMenuAction(id, order_num, parent_id);
-      },
-    }));
+    dispatch(
+      showConfirm({
+        message: '해당 메뉴를 삭제 하시겠습니까?',
+        onConfirm: async () => {
+          await deleteMenuAction(id, order_num, parent_id);
+        },
+      }),
+    );
   };
 
   // 메뉴 drag and drop
@@ -136,7 +138,7 @@ const Management = ({ setIsOpen, setIsLoading, isLoading }) => {
                           menu={menu}
                           firstList={firstList}
                           secondList={secondList}
-                          />
+                        />
                         <Dropdown visibility={clickId.includes(menu.idx)}>
                           <SubMenu
                             Droppable={Droppable}

@@ -44,7 +44,7 @@ const Main = ({ isLoading, setIsLoading }) => {
         <div className='carousel'>
           <div className='carousel-slider' style={{ transform: `translateX(-${currentCarouselIndex * 100}%)` }}>
             {(windowWidth > 1099 ? images : smallImages).map((image, index) => (
-              <img key={index} src={image} alt={`Image ${index + 1}`} />
+              <img key={index} src={image} alt='메인 이미지' />
             ))}
           </div>
           <div className='carousel_btn'>

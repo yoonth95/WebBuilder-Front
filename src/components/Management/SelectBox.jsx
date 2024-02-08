@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import 'styles/Management/SelectBox.css';
-import Dropdown from 'components/DropDown/DropDown';
 
 const SelectBox = ({ type, link, curMenuData, secondList, editedLink, handleLinkChange, setSelectIdx, page }) => {
   const [isToggle, setIsToggle] = useState(false);
@@ -35,11 +34,20 @@ const SelectBox = ({ type, link, curMenuData, secondList, editedLink, handleLink
           사용자 추가 페이지
         </li>
         {type === '복제'
-          ? secondList.filter(e => e.idx !== page).map((subMenu) => (
-              <li className='select_option' key={subMenu.idx} onClick={(e) => {setSelectIdx(subMenu.idx); handleButtonClick(e, subMenu.link)}}>
-                {subMenu.title}
-              </li>
-            ))
+          ? secondList
+              .filter((e) => e.idx !== page)
+              .map((subMenu) => (
+                <li
+                  className='select_option'
+                  key={subMenu.idx}
+                  onClick={(e) => {
+                    setSelectIdx(subMenu.idx);
+                    handleButtonClick(e, subMenu.link);
+                  }}
+                >
+                  {subMenu.title}
+                </li>
+              ))
           : secondList
               .filter((submenu) => submenu.parent_id === parent_id)
               .map((subMenu) => (
@@ -60,6 +68,3 @@ const common = [
   { id: '565373', link: '/signup', title: '회원가입' },
   { id: '09042385', link: '/findId', title: '아이디 찾기' },
 ];
-{
-  /* <Dropdown visibility={isToggle} dropdownClassName={isToggle ? 'selectbox-dropupp' : 'dropup'}> </Dropdown> */
-}

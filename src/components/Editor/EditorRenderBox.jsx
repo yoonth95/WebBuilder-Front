@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 
 import ApplyTable from 'components/Editor/ApplyTable';
 import TextEditor from 'components/Editor/TextEditor';
